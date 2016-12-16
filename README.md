@@ -21,3 +21,18 @@ Place this in your `load-path`, add the following lines to your init file, and i
 (setq endless/blog-base-url "http://endlessparentheses.com/")
 (setq endless/blog-dir (expand-file-name "~/Git-Projects/blog/"))
 ```
+
+Change also in the ox-jekyll-subtree.el file the following line according your blog-dir and url:
+```
+(defcustom endless/blog-dir (expand-file-name "~/Git-Projects/blog/")
+  "Directory to save posts."
+  :type 'directory
+  :group 'endless)
+
+(defcustom endless/blog-base-url "http://endlessparentheses.com/"
+  "Base URL of the blog.
+Will be stripped from links addresses on the final HTML."
+  :type 'string
+:group 'endless)
+```
+
